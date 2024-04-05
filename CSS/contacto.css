@@ -1,0 +1,125 @@
+.inicio-contacto{
+    padding-top: 3em;
+    text-align: center;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.inicio-contacto p span {
+    color: var(--primary-color--);
+    font-weight: 700;
+    font-size: 1.2em;
+}
+.inicio-contacto p{
+    padding: 20px;
+}
+.container-contactenos{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: 30px auto;
+}
+.container-contactenos .espacio-doble img{
+    width: 100%;
+    height: auto;
+    margin: 0 5px;
+    text-align: center;
+    padding: 30px 30px;
+    order: 1;
+}
+
+.container-contactenos form{
+    padding: 55px 55px;
+    box-shadow: 0 0 20px #000000fa;
+    border-radius: 20px;
+    background-color: #00000033;
+}
+.checkbox{
+    margin: 0;
+}
+.form-txt{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    padding-bottom: 40px;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+input,  select{
+    background-color: #4745455c;
+    padding: 10px 10px;
+    margin-bottom: 25px;
+    border-radius: 30px;
+    font-size: 15px;
+    border: 0;
+}
+select:focus{
+    outline: none;
+}
+form textarea{
+        background-color: #4745455c;
+        padding: 10px 10px;
+        margin-bottom: 25px;
+        border-radius: 7px;
+        font-size: 15px;
+        border: 0;
+}
+::placeholder{
+    font-size: 15px;
+}
+input:focus{
+    outline: 1px solid #cc0001;
+}
+.mapa{
+    text-align: center;
+    padding: 60px 0;
+    background-color: rgba(0, 0, 0, 0.954);
+}
+.mapa h3{
+    padding-bottom: 40px;
+    font-size: 30px;
+    color: white; 
+}
+.mapa iframe{
+    width: 50%;
+    height: 400px;
+}
+.checkbox{
+    padding: 510px;
+    width: 30px;
+    border-radius: 50%;
+
+}
+
+@media screen and (max-width: 900px) {
+    .container-contactenos{
+        width: 100%;
+        flex-direction: column;
+    }
+    .container-contactenos .espacio-doble{
+        width: 90%;
+        padding: 30px 20px;
+    }
+    .container-contactenos .espacio-doble img{
+        display: none;
+    }
+    
+    input,  select{
+        padding: 5px 5px;
+        margin-bottom: 15px;
+        font-size: 13px;
+        border: 0;
+    }
+    form textarea{
+        background-color: #4745455c;
+        padding: 5px 5px;
+        margin-bottom: 15px;
+        font-size: 13px;
+    }
+    ::placeholder{
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,249 @@
+html{
+    scroll-behavior: smooth;
+    scroll-margin-top: 100px;
+
+}
+.cont-nosotros{
+    margin: 0 auto;
+    width: 70%;
+    padding: 40px 0;
+}
+.nosotros-caja {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+}
+
+.nosotros-caja p{
+    padding: 20px 30px;
+}
+.nosotros-caja .nosotros-img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.h2-nosotros{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0 0px;
+    font-size: 20px;
+}
+.h2-nosotros img{
+    width: 100px;
+    height: auto;
+    animation: heart .7s infinite alternate linear;
+}
+/*galery*/
+
+.container-galery{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.container-galery h2{
+    padding: 20px 0;
+    font-size: 30px;
+}
+.container-galery .navigatorvar-galery{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+}
+.container-galery .navigatorvar-galery ul{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.container-galery .navigatorvar-galery ul li{
+    padding: 10px 30px;
+}
+
+.container-galery .navigatorvar-galery ul li a{
+    color:#fff;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    animation: transform 2s ease;
+
+}
+.container-galery .navigatorvar-galery ul li a:hover{
+    transform: scale(1.1);
+
+}
+.container-galery h2,h3{
+    color: #000;
+}
+.container-galery h3{
+    margin-top: 45px;
+}
+.galery{
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.galery h3{
+    padding: 20px;
+    font-size: 2em;
+}
+
+
+.galery ul{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 360px);
+    gap: 1rem;
+}
+
+.galery ul li{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 30%;
+}
+
+
+
+.galery ul li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+    transform: scale(1.1);
+    
+    
+}
+.galery li img:hover{
+    transform: scale(1);
+}
+
+.lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 6;
+    pointer-events: none;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.lightbox.activo-galery{
+    opacity: 1;
+    pointer-events: auto;
+}
+.lightbox .close{
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    background: none;
+    top: 5rem;
+    right: 10rem;
+}
+.lightbox .close:hover{
+    opacity: .8;
+}
+.lightbox .pasar-img{
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    right: 6rem;
+    cursor: pointer;
+}
+.lightbox .pasar-img:hover{
+    opacity: .8;
+}
+.lightbox .retroceder-img{
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 6rem;
+    cursor: pointer;
+}
+
+.lightbox .retroceder-img:hover{
+    opacity: .8;
+}
+.lightbox .img-grande{
+    width: 40em;
+    height: auto;
+    background-color: aqua;
+}
+
+@keyframes heart {
+    from{
+        transform: scale(.8);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes reveal {
+    from{
+        transform: scale(.8);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@media screen and (max-width:800px){
+    .cont-nosotros{
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .container-galery .navigatorvar-galery ul{
+        flex-direction: column;
+    }
+    .lightbox .pasar-img{
+        top: 90%;
+        right: 30%;
+    }
+    
+    .lightbox .retroceder-img{
+        top: 90%;
+        left: 30%;
+    }
+    .lightbox .close{
+        top: 5rem;
+        right: 4rem;
+    }
+    .galery ul{
+        grid-template-columns: repeat(auto-fill, 360px);
+    }
+
+}

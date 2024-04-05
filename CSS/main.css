@@ -1,0 +1,411 @@
+
+.grid-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.caja {
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 40px 0;
+}
+.main-img{
+    width: 350px;
+}
+.caja h3{
+    padding: 15px 0;
+    color: var(--primary-color--);
+}
+.caja h5{
+    font-size: 17px;
+}
+.caja .pizza4sabores img{
+    width: 30%;
+    height: 30%;
+}
+.sub-caja{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.img-pizzeria-horarios-main img,
+.img-pizzeria-menu-main img{
+    border-radius: 10%;
+}
+.caja .frase-main-horarios p{
+    padding: 0 100px;
+}
+.caja .frase-main-horarios h5{
+    margin-bottom: 0;
+}
+.caja .frese-main{
+    padding: 0 20%;
+}
+.super-cont-hov{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: 
+    repeating-radial-gradient(#ffffff00 0 0.0001%,#00000090 0 0.0002%) 50% 0/2500px 2500px,
+    repeating-conic-gradient(#ffffff05 0 0.0001%,#00000000 0 0.0002%) 60% 60%/2500px 2500px;
+    background-blend-mode: difference;
+    animation: b .2s infinite alternate;
+
+    background-color: #1a0000;
+}
+@keyframes b{
+  100% {background-position: 50% 0, 60% 50%}
+}
+.contenedor-main-hov{
+    box-sizing: border-box;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 300px;
+    height: 300px;
+}
+
+.contenedor-main-hov img{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    animation: rotate-img 2s ease;
+}
+.contenedor-main-hov .conthov1{
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top: -25%;
+    left: -150%;
+    width: 0;
+    height: 0;
+    transition: width 0.3s ease, height 0.3s ease;
+    border-radius: 10px;
+    -webkit-box-shadow: -10px 10px 24px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 24px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 24px 5px rgba(0, 0, 0, 0.75);
+    background-color: white !important;
+}
+
+.contenedor-main-hov .conthov2{
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top:-25%;
+    right: -150%;
+    width: 0;
+    height: 0;
+    transition: width 0.3s ease, height 0.3s ease;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 24px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 24px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 24px 5px rgba(0, 0, 0, 0.75);
+}
+
+.contenedor-main-hov .conthov3{
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top: -25%;
+    right: 100%;
+    width: 0;
+    height: 0;
+    transition: width 0.3s ease, height 0.3s ease;
+    border-radius: 10px;
+    -webkit-box-shadow: -10px 10px 24px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 24px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 24px 5px rgba(0, 0, 0, 0.75);
+}
+
+.contenedor-main-hov .conthov4{
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top:-25%;
+    left: 100%;
+    width: 0;
+    height: 0;
+    transition: width 0.3s ease, height 0.3s ease;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 24px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 24px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 24px 5px rgba(0, 0, 0, 0.75);
+}
+.sombra1:hover, .sombra2:hover, .sombra3:hover, .sombra4:hover{
+    transform: scale(1.1);
+}
+.contenedor-main-hov .conthov1.active{
+    width: 150%;
+    height: 150%;
+}
+
+.contenedor-main-hov .conthov2.active{
+    width: 150%;
+    height: 150%;
+}
+
+.contenedor-main-hov .conthov3.active{
+    width: 150%;
+    height: 150%;
+}
+
+.contenedor-main-hov .conthov4.active{
+    width: 150%;
+    height: 150%;
+}
+.contenedor-main-hov .cardhov1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s ease;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.contenedor-main-hov .cardhov2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 2s ease;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contenedor-main-hov .cardhov3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 2s ease;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contenedor-main-hov .cardhov4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 2s ease;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+.cardhov4 img, .cardhov1 img, .cardhov2 img, .cardhov3 img {
+    padding: 20px 0;
+    width: 100%;
+    height: auto;
+    animation: none !important;
+}
+.cardhov4 h2, .cardhov1 h2, .cardhov2 h2, .cardhov3 h2{
+    color: var(--primary-color--);
+}
+.cardhov4 p, .cardhov1 p, .cardhov2 p, .cardhov3 p{
+    padding: 20px 0;
+}
+.conthov1.active .cardhov1{
+    opacity: 1;
+}
+
+.conthov2.active .cardhov2{
+    opacity: 1;
+}
+
+.conthov3.active .cardhov3{
+    opacity: 1;
+}
+
+.conthov4.active .cardhov4{
+    opacity: 1;
+}
+.sub2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    right: -150%;
+    top: -25%;
+    width: 150%;
+    height: 150%;
+    opacity: 1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.sub1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    position: absolute;
+    right: 100%;
+    top: -25%;
+    width: 150%;
+    height: 150%;
+    padding: 60px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.sub1 img, .sub2 img{
+    width: 100%;
+    height: auto;
+    animation: none;
+}
+.sub1 h2, .sub2 h2{
+    color: var(--primary-color--);
+}
+.sub1 p, .sub2 p{
+    padding: 10px 0;
+}
+.sub1 i{
+    font-size: 2rem;
+    animation: subeybaja 1s ease infinite;
+    translate: calc(50%);
+}
+
+
+.contenedor-galery-main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+    padding: 40px 0;
+}
+.contenedor-galery-main .subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100px;
+    color: white;
+    background-color: #cd0001;
+    border-radius: 20px 20px 0 0;
+}
+.contenedor-galery-main h2{
+    font-size: 2.2rem;
+}
+.subtitle h2{
+    font-size: 1.9rem;
+}
+.contenedor-galery-main .h2a {
+    opacity: 0;
+    position: absolute;
+}
+.contenedor-galery-main .active-img{
+    opacity: 1;
+}
+.carrousel{
+    display: flex;
+    width: 80%;
+    height: 430px;
+}
+.carrousel img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: all 0.4s ease;
+}
+.carrousel img:hover{
+    cursor: pointer;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+.imgdisplaynone{
+    display: none;
+}
+@keyframes rotate-img {
+    0%{
+        transform: scale(0.2) rotate(180deg);
+    }
+    100%{
+        transform: scale(1) rotate(360deg);
+    }
+}
+@keyframes subeybaja {
+    0%{
+        transform: translatey(0);
+    }
+    50%{
+        transform: translatey(3px);
+    }
+    100%{
+        transform: translatey(0);
+    }
+}
+@media screen and (max-width:830px) {
+
+    .grid-main{
+        grid-template-columns: auto;
+    }
+    .sub-caja{
+        display: flex;
+        flex-direction: column;
+    }
+    .sub-caja-1 .caja:nth-child(1){
+        order: 2;
+    }
+    .sub-caja-1 .caja:nth-child(2){
+        order: 1;
+    }
+    .sub-caja-3 .caja:nth-child(1){
+        order: 2;
+    }
+    .sub-caja-3 .caja:nth-child(2){
+        order: 1;
+    }
+    .animation-pizzas img{
+        width: 100px;
+    }
+    .as1{
+        width: 0;
+    }
+    .as2{
+        width: 100%;
+    }
+    .as3{
+        width: 0;
+    }
+
+}
