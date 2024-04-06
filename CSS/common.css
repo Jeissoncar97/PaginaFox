@@ -97,11 +97,10 @@
 	width: 30px;
 }
 
-.sub-cont-whatsapp {
+.sub-cont-whatsapp a{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	flex-direction: row;
 	padding: 5px 10px;
 }
 
@@ -111,6 +110,7 @@
 	display: none;
 	transition: display 1s ease;
 	padding-left: 10px;
+	color: #000;
 	margin-right: 10px;
 }
 
@@ -124,9 +124,7 @@
 	background-color: #25d666;
 }
 
-main {
-	background-color: #f6f6f6;
-}
+
 
 .chatbot-toggler {
 	position: fixed;
