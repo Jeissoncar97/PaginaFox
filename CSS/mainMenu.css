@@ -181,4 +181,20 @@
 	.container {
 		grid-template-columns: auto;
 	}
+	.container-grid {
+		width: 100%;
+	}
+	.menu {
+		padding: 0;
+	}
+	.menu .menu-menu h3{
+		font-size: 20px;
+	}
+	.menu .menu-menu a li{
+		font-size: 16px;
+	}
+	.platos {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+    }
+
 }
