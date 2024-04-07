@@ -53,13 +53,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: 
-    repeating-radial-gradient(#ffffff00 0 0.0001%,#00000090 0 0.0002%) 50% 0/2500px 2500px,
-    repeating-conic-gradient(#ffffff05 0 0.0001%,#00000000 0 0.0002%) 60% 60%/2500px 2500px;
-    background-blend-mode: difference;
-    animation: b .2s infinite alternate;
-
-    background-color: #1a0000;
+   
 }
 @keyframes b{
   100% {background-position: 50% 0, 60% 50%}
